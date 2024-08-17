@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Billing System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Online Billing System</h1>
+        <form id="billing-form" class="mb-4">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="item-name" class="form-control" placeholder="Item Name" required>
+                </div>
+                <div class="col">
+                    <input type="number" id="item-quantity" class="form-control" placeholder="Item-quantity" required>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Add Item</button>
+                </div>
+            </div>
+        </form>
+
+        <h2 class="my-4">Billing List</h2>
+        <div id="billing-list" class="list-group"></div>
+
+        <h3 class="my-4">Total Price: $<span id="total-price">0.00</span></h3>
+
+        <h2 class="my-4">Payment Options</h2>
+        <div class="form-group">
+            <label for="payment-gateway">Choose Payment Gateway:</label>
+            <select id="payment-gateway" class="form-control">
+                <option value="paypal">PayPal</option>
+                <option value="stripe">Stripe</option>
+                <option value="square">Square</option>
+            </select>
+        </div>
+        <button id="pay-button" class="btn btn-success">Proceed to Payment</button>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
